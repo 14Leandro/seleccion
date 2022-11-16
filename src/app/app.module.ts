@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JugadoresListComponent } from './jugadores-list/jugadores-list.component';
+import { SeleccionAboutComponent } from './seleccion-about/seleccion-about.component';
+import { SeleccionJugadoresComponent } from './seleccion-jugadores/seleccion-jugadores.component';
+import { FavoritoComponent } from './favorito/favorito.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JugadoresListComponent,
+    SeleccionAboutComponent,
+    SeleccionJugadoresComponent,
+    FavoritoComponent,
   ],
   imports: [
     BrowserModule,

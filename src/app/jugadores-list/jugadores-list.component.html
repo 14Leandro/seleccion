@@ -1,0 +1,31 @@
+<h4>Lista de Jugadores</h4>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Posición</th>
+            <th>Numero</th>
+            <th>Club</th>
+            <th>Convocados</th>
+            <th>Favoritos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let jugador of jugadores">
+            <td><img [src]="jugador.imagen" [alt]="jugador.nombre"></td>
+            <td>{{jugador.nombre | titlecase}}</td>
+            <td>{{jugador.posicion | titlecase}}</td>
+            <td>{{jugador.numero}}</td>
+            <td>{{jugador.club | titlecase}}</td>
+            <td>
+                <span class="badge text-bg-warning" *ngIf="jugador.convocado==false">No fue convocado</span>
+                <span class="badge text-bg-success" *ngIf="jugador.convocado==true">Fue convocado</span>
+            </td> 
+            <td>
+                <!-- <button class="btn btn-sm btn-danger" (click)="downFavorite(jugador)">☆</button>
+                {{jugador.favorito}} -->
+                <button class="btn btn-sm btn-success" (click)="addToFavorite(jugador)">★</button></td>
+        </tr>
+    </tbody>
+</table>
