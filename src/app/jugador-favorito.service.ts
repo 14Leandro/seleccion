@@ -9,17 +9,17 @@ export class JugadorFavoritoService {
 
   private _favoritoList: Jugador[] = [];
 
-  favoritoList: BehaviorSubject<Jugador[]> = new BehaviorSubject([]);
-  listaFavorito: any;
+  // favoritoList: BehaviorSubject<Jugador[]> = new BehaviorSubject([]);
+  // listaFavorito: any;
 
   constructor() { }
 
-  addToFavorite(jugador: Jugador) {
-      let item: Jugador = this._favoritoList.find((v1) => v1.nombre==jugador.nombre);
-      if (!item) {
-        this._favoritoList.push({ ... jugador});
-      }
-      this.favoritoList.next(this._favoritoList);
-  }
+  // addToFavorite(jugador: Jugador) {
+  //     let item: Jugador |undefined = this._favoritoList.find((v1) => v1.nombre==jugador.nombre);
+  //     if (!item) {
+  //       this._favoritoList.push({ ... jugador});
+  //     }
+  //     // this.favoritoList.next(this._favoritoList);
+  // }
 
 }

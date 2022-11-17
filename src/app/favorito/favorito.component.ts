@@ -10,10 +10,10 @@ import { Jugador } from '../jugadores-list/Jugador';
 })
 export class FavoritoComponent implements OnInit {
 
-  listaFavorito$: Observable<Jugador[]>;
+  // listaFavorito$: Observable<Jugador[]>;
   
   constructor(private favorito:JugadorFavoritoService) { 
-    this.listaFavorito$ = favorito.favoritoList.asObservable();
+    // this.listaFavorito$ = favorito.favoritoList.asObservable();
   }
 
   ngOnInit(): void {

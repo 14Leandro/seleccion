@@ -50,9 +50,9 @@ export class JugadoresListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToFavorite(jugador: Jugador): void{
-    this.favorito.addToFavorite(jugador);
-  }
+  // addToFavorite(jugador: Jugador): void{
+  //   this.favorito.addToFavorite(jugador);
+  // }
 
   // upFavorite(jugador: Jugador): void{
   //   jugador.favorito++;
