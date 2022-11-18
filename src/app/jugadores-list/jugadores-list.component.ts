@@ -44,15 +44,16 @@ export class JugadoresListComponent implements OnInit {
 
   ];
   
-  constructor(private favorito:JugadorFavoritoService) { 
+  constructor(private favorito: JugadorFavoritoService) { 
   }
 
   ngOnInit(): void {
   }
 
-  // addToFavorite(jugador: Jugador): void{
-  //   this.favorito.addToFavorite(jugador);
-  // }
+  addToFavorito(jugador: Jugador): void{
+    
+    this.favorito.addToFavorito(jugador);
+  }
 
   // upFavorite(jugador: Jugador): void{
   //   jugador.favorito++;

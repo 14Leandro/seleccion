@@ -1,6 +1,9 @@
 <h4>Jugadores Favoritos</h4>
-<!-- <ul>
-    <li *ngFor="let jugador of (listaFavorito$ | async)">
-        {{jugador.imagen}} {{jugador.nombre}} {{jugador.numero}}
+<ul>
+    <li *ngFor="let jugador of favoritoList$ | async">
+        <!-- {{jugador.imagen}}  -->
+        {{jugador.numero}} |
+        {{jugador.nombre}} |
+         {{jugador.posicion}}
     </li>
-</ul> -->
+</ul>

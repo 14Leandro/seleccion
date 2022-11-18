@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
 import { JugadorFavoritoService } from '../jugador-favorito.service';
 import { Jugador } from '../jugadores-list/Jugador';
 
@@ -8,19 +8,17 @@ import { Jugador } from '../jugadores-list/Jugador';
   templateUrl: './favorito.component.html',
   styleUrls: ['./favorito.component.scss']
 })
+
 export class FavoritoComponent implements OnInit {
 
-  // listaFavorito$: Observable<Jugador[]>;
+  favoritoList$: Observable<Jugador[]>;
   
-  constructor(private favorito:JugadorFavoritoService) { 
-    // this.listaFavorito$ = favorito.favoritoList.asObservable();
+  constructor(private favorito: JugadorFavoritoService) { 
+    this.favoritoList$ = favorito.favoritoList.asObservable();
+    // favorito.favoritoList.subscribe(f => this.favoritoList = f);
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void{
-
   }
 
 }
