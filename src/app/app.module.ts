@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 import { JugadoresListComponent } from './jugadores-list/jugadores-list.component';
 import { SeleccionAboutComponent } from './seleccion-about/seleccion-about.component';
 import { SeleccionJugadoresComponent } from './seleccion-jugadores/seleccion-jugadores.component';
@@ -14,11 +17,12 @@ import { FavoritoComponent } from './favorito/favorito.component';
     JugadoresListComponent,
     SeleccionAboutComponent,
     SeleccionJugadoresComponent,
-    FavoritoComponent,
+    FavoritoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

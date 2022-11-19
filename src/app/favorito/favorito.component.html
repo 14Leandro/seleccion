@@ -1,9 +1,19 @@
 <h4>Jugadores Favoritos</h4>
-<ul>
-    <li *ngFor="let jugador of favoritoList$ | async">
-        <!-- {{jugador.imagen}}  -->
-        {{jugador.numero}} |
-        {{jugador.nombre}} |
-         {{jugador.posicion}}
-    </li>
-</ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Numero</th>
+            <th>Posición</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let jugador of favoritoList$ | async">
+        <tr>
+            <td><img src="{{jugador.imagen}}" alt="{{jugador.nombre}}"></td>
+            <td>{{jugador.nombre}}</td>
+            <td>{{jugador.numero}}</td>
+            <td>{{jugador.posicion}}</td>
+        </tr>
+    </tbody>
+</table>

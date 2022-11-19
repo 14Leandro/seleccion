@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JugadorDataService } from '../jugador-data.service';
 import { JugadorFavoritoService } from '../jugador-favorito.service';
 import { Jugador } from './Jugador';
 
@@ -8,46 +9,16 @@ import { Jugador } from './Jugador';
   styleUrls: ['./jugadores-list.component.scss']
 })
 export class JugadoresListComponent implements OnInit {
-  jugadores : Jugador[] = [
-    {
-      nombre: 'emiliano martinez',
-      posicion: 'Arquero',
-      numero: 23,
-      club: 'Aston Villa',
-      imagen:'assets/img/dibu.jpeg',
-      convocado: true,
-    },
-    {
-      nombre: 'nicolas otanedi',
-      posicion: 'Defensor',
-      numero: 19,
-      club: 'Benfica',
-      imagen:'assets/img/otamendi.png',
-      convocado: true,
-    },
-    {
-      nombre: 'leandro paredes',
-      posicion: 'Mediocampista',
-      numero: 5,
-      club: 'Juventus',
-      imagen:'assets/img/paredes.webp',
-      convocado: true,
-    },
-    {
-      nombre: 'Angel Correa',
-      posicion: 'Delantero',
-      numero: 21,
-      club: 'Atletico Madrid',
-      imagen:'assets/img/correa.webp',
-      convocado: false,
-    }
-
-  ];
+  jugadores : Jugador[] = [];
   
-  constructor(private favorito: JugadorFavoritoService) { 
+  constructor(
+    private favorito: JugadorFavoritoService,
+    private jugadoresDataService: JugadorDataService) { 
   }
 
   ngOnInit(): void {
+    this.jugadoresDataService.getAll()
+    .subscribe(jugadores => this.jugadores = jugadores);
   }
 
   addToFavorito(jugador: Jugador): void{
