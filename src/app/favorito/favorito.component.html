@@ -1,19 +1,19 @@
 <h4>Jugadores Favoritos</h4>
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>#</th>
             <th>Nombre</th>
             <th>Numero</th>
-            <th>Posición</th>
+            <th>Club</th>
         </tr>
     </thead>
     <tbody *ngFor="let jugador of favoritoList$ | async">
         <tr>
             <td><img src="{{jugador.imagen}}" alt="{{jugador.nombre}}"></td>
-            <td>{{jugador.nombre}}</td>
+            <td><b>{{jugador.nombre}}</b> ({{jugador.posicion}})</td>
             <td>{{jugador.numero}}</td>
-            <td>{{jugador.posicion}}</td>
+            <td>{{jugador.club}}</td>
         </tr>
     </tbody>
 </table>

@@ -1,0 +1,65 @@
+.main-qatar{
+    margin-bottom: 10vh;
+}
+
+.estadio-nombre{
+    font-size: 30px;
+    color: #000;
+    margin-top: 10vh;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.titulo-fixture{
+    font-size: 30px;
+    margin: 40px;
+    margin-left: 70px;
+    padding: 0px;
+}
+
+.tabla-fixture{
+    background-color: #fff;
+    border-radius: 20px 20px 0px 0px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+
+    .tabla-fixture th{
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    
+    .tabla-fixture td{
+        background-color: #eeeeee;
+    }
+
+    .bandera{
+        height: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+    }
+
+    .rival{
+        font-weight: 700;
+    }
+
+
+.cont-estadios{
+    height: 600px;
+}
+
+    .cont-estadios p{
+        margin-left: 50px;
+        color: #000;
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .cont-estadios .estadio-img{
+        margin-left: 50px;
+        max-width: 50%;
+    }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SeleccionAboutComponent } from './seleccion-about/seleccion-about.component';
 import { SeleccionJugadoresComponent } from './seleccion-jugadores/seleccion-jugadores.component';
+import { SeleccionQatarComponent } from './seleccion-qatar/seleccion-qatar.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'about',
     component: SeleccionAboutComponent
+  },
+  {
+    path:'qatar',
+    component: SeleccionQatarComponent
   }
 ];
 

@@ -1,16 +1,47 @@
-<form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<div class="contenedor-form m-auto mt-5 mb-5">
+    <div class="izquierda-form">
+        <img src="assets/img/messiForm.png" class="messi"/>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+    <div>
+        <h2>Detalles de Pago</h2>
+        <form>
+            <ul class="form-list">
+                <li class="form-list__row">
+                    <label>Nombre y Apellido</label>
+                    <input type="text" name="" required=""/>
+                </li>
+                <li class="form-list__row">
+                    <label>Numero de tarjeta</label>
+                    <div>
+                        <input type="text" name="numero" required=""/>
+                    </div>
+                </li>
+                <li class="form-list__row form-list__row--inline">
+                    <div>
+                        <label>Fecha de expiracion</label>
+                        <div class="form-list__input-inline">
+                            <input type="text" name="mes" placeholder="Mes" required=""/>
+                            <input type="text" name="anio" placeholder="Año" required=""/>
+                        </div>
+                    </div>
+                    <div>
+                        <label>
+                            CDS
+                        </label>
+                        <input type="text" name="cds" placeholder="123" required=""/>
+                    </div>
+                </li>
+                <li class="form-list__row form-list__row--agree">
+                    <label>
+                        <input type="checkbox" name="guardar" checked="checked">
+                            Guardar mis datos para proximas compras
+                    </label>
+                </li>
+                <li>
+                    <button type="submit" class="button">Pagar</button>
+                </li>
+            </ul>
+        </form>
     </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+</div>
+

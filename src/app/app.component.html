@@ -10,10 +10,10 @@
             <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/about']">Contacto</a>
+            <a class="nav-link" [routerLink]="['/about']">Entradas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Qatar 2022</a>
+            <a class="nav-link" [routerLink]="['/qatar']">Qatar 2022</a>
           </li>
         </ul>
       </div>
@@ -25,4 +25,18 @@
     <router-outlet></router-outlet>
 </div>
 
-<footer>© 2021 - {{title}} Argentina | All rights reserved</footer>
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom border-2 pb-3 mb-3">
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" [routerLink]="['/']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" [routerLink]="['/about']">Contacto</a>
+      </li>
+    </ul>
+    <p class="text-center text-muted">© 2021 - {{title}} Argentina | All rights reserved</p>
+  </footer>
+</div>
+
+<div class="b-example-divider"></div>

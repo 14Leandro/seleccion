@@ -10,6 +10,7 @@ import { JugadoresListComponent } from './jugadores-list/jugadores-list.componen
 import { SeleccionAboutComponent } from './seleccion-about/seleccion-about.component';
 import { SeleccionJugadoresComponent } from './seleccion-jugadores/seleccion-jugadores.component';
 import { FavoritoComponent } from './favorito/favorito.component';
+import { SeleccionQatarComponent } from './seleccion-qatar/seleccion-qatar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FavoritoComponent } from './favorito/favorito.component';
     JugadoresListComponent,
     SeleccionAboutComponent,
     SeleccionJugadoresComponent,
-    FavoritoComponent
+    FavoritoComponent,
+    SeleccionQatarComponent
   ],
   imports: [
     BrowserModule,
